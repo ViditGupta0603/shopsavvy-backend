@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth_working as auth, expenses, receipts  # Add receipts
+from app.routers import auth_working as auth, expenses, receipts  # Keep receipts!
 from app.database.mongodb import connect_to_mongo, close_mongo_connection
 import logging
 
@@ -30,10 +30,10 @@ async def startup_event():
 async def shutdown_event():
     await close_mongo_connection()
 
-# Include all routers
+# Include ALL routers including OCR
 app.include_router(auth.router)
 app.include_router(expenses.router)
-app.include_router(receipts.router)  # Add receipts router
+app.include_router(receipts.router)  # OCR functionality!
 
 @app.get("/")
 async def root():

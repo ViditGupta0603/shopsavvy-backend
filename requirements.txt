@@ -12,3 +12,4 @@ pydantic-settings==2.1.0
 python-dotenv==1.0.0
 setuptools>=65.0.0
 email-validator>=2.0.0
+numpy<2.0.0
