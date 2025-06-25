@@ -1,0 +1,9 @@
+{
+  "test@example.com": {
+    "id": "6858f0d693c64245adde6fd7",
+    "email": "test@example.com",
+    "password": "$2b$12$L0MiLEVa1IG1UVPP6YJOZ.IjzcBJJY8Rg7GNn8sgSK66wR9puhNQC",
+    "full_name": "Test User",
+    "is_active": true
+  }
+}
