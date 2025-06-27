@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth_working as auth, expenses, receipts  # Keep receipts!
-from app.database.mongodb import connect_to_mongo, close_mongo_connection
+from api.routers import auth_working as auth, expenses, receipts  # Keep receipts!
+from api.database.mongodb import connect_to_mongo, close_mongo_connection
 import logging
 
 logging.basicConfig(level=logging.DEBUG)

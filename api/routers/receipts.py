@@ -1,7 +1,7 @@
 from fastapi import APIRouter, File, UploadFile, Depends, HTTPException
-from app.core.dependencies import get_current_user
-from app.services.ocr_service import ocr_service
-from app.models.expense import ExpenseCreate, ExpenseCategory
+from api.core.dependencies import get_current_user
+from api.services.ocr_service import ocr_service
+from api.models.expense import ExpenseCreate, ExpenseCategory
 from typing import Dict
 import logging
 from datetime import datetime
@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/receipts", tags=["Receipts"])
 
 # In-memory storage for receipts (same as expenses)
-from app.routers.expenses import expenses_db
+from api.routers.expenses import expenses_db
 
 @router.post("/parse")
 async def parse_receipt(

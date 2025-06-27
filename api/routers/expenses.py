@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from app.core.dependencies import get_current_user
-from app.models.expense import ExpenseCreate
+from api.core.dependencies import get_current_user
+from api.models.expense import ExpenseCreate
 from typing import List, Optional, Dict
 from datetime import datetime
 import logging

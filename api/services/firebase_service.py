@@ -1,6 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore, auth
-from app.core.config import settings
+from api.core.config import settings
 from typing import Dict, List, Optional
 import logging
 from datetime import datetime  # Add this line

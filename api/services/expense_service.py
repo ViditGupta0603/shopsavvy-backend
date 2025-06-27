@@ -1,4 +1,4 @@
-from app.database.mongodb import get_database
+from api.database.mongodb import get_database
 from bson import ObjectId
 from datetime import datetime
 from typing import List, Dict

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, Query
-from app.core.dependencies import get_current_user
-from app.services.firebase_service import firebase_service
+from api.core.dependencies import get_current_user
+from api.services.firebase_service import firebase_service
 from typing import Optional
 from datetime import datetime, timedelta
 

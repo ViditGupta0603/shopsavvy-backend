@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from app.models.user import UserCreate, UserLogin, Token, UserResponse
-from app.services.user_service import user_service
-from app.services.auth_service import auth_service
-from app.core.dependencies import get_current_user
+from api.models.user import UserCreate, UserLogin, Token, UserResponse
+from api.services.user_service import user_service
+from api.services.auth_service import auth_service
+from api.core.dependencies import get_current_user
 from datetime import timedelta
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])

@@ -1,13 +1,13 @@
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from app.services.auth_service import auth_service
+from api.services.auth_service import auth_service
 import logging
 
 logger = logging.getLogger(__name__)
 security = HTTPBearer()
 
 # Import the in-memory users from auth_working
-from app.routers.auth_working import users_db
+from api.routers.auth_working import users_db
 
 async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
     """Get current user from JWT token - In-memory version"""

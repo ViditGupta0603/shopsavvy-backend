@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, EmailStr
-from app.services.auth_service import auth_service
+from api.services.auth_service import auth_service
 from bson import ObjectId
 from datetime import timedelta
 import logging

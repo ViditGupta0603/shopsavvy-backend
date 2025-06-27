@@ -1,6 +1,6 @@
-from app.database.mongodb import get_database
-from app.services.auth_service import auth_service
-from app.models.user import UserCreate, UserLogin
+from api.database.mongodb import get_database
+from api.services.auth_service import auth_service
+from api.models.user import UserCreate, UserLogin
 from bson import ObjectId
 from datetime import datetime
 from fastapi import HTTPException, status
