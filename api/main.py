@@ -33,7 +33,7 @@ async def shutdown_event():
 # Include ALL routers including OCR
 app.include_router(auth.router)
 app.include_router(expenses.router)
-# app.include_router(receipts.router)  # OCR functionality!
+app.include_router(receipts.router)  # OCR functionality!
 
 @app.get("/")
 async def root():
